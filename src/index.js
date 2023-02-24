@@ -8,6 +8,8 @@
     <img class="mx-auto" src="https://randomfox.ca/images/62.jpg" alt="Fox #62" width="320">
 </div> */}
 
+import { registerImage } from "./lazy";
+
 const max =122;
 const min =1;
 
@@ -30,6 +32,14 @@ const createImageNode = ()=> {
 
 const nuevaImagen = createImageNode();
 const mountNode = document.getElementById('images')
-mountNode.appendChild(nuevaImagen);
+
+const addButton = document.querySelector('button');
+
+const addImage = ()=> {
+    const newImage = createImageNode();
+    mountNode.appendChild(newImage);
+    registerImage(newImage);
+};
+addButton.addEventListener('click', addImage);
 
 
