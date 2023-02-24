@@ -1,4 +1,8 @@
 {
+  "name": "my-app",
+  "version": "0.1.0",
+  "homepage": "https://HASCA-GH.github.io/workshop2-lazy-loading",
+  "private": true,
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
@@ -8,6 +12,7 @@
     "install:husky": "husky install"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "husky": "7",
     "prettier": "^2.0.5",
     "pretty-quick": "^3.1.0",
