@@ -20,7 +20,9 @@ const createImageNode = ()=> {
     container.className = 'p-4';
 
     const imagen = document.createElement('img');
-    imagen.src =`https://randomfox.ca/images/${random()}.jpg` ; //todo
+    // imagen.src =`https://randomfox.ca/images/${random()}.jpg` ; //todo
+    // Se cambió por data.src para que la imagen no se cargue inmediatamente con solo decirle imagen.src, porque debemos aplicar la técnica lazy loading. En otras palabras le asignamos el src a otro atributo en vez de image.src. Luego en el file lazy.js hacemos que aparezca o cargue la imagen
+    imagen.dataset.src =`https://randomfox.ca/images/${random()}.jpg` ; 
     imagen.className="mx-auto";
     imagen.width="320";
     imagen.alt="Fox #62";
